@@ -1,6 +1,7 @@
 ---
 title: Creating a new blog site. How I created it?
-date: '2022-06-15 00:00:00'
+date: '15.06.2022'
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone! This is Batuhan and this is the first post of my new blog.

@@ -1,6 +1,7 @@
 ---
 title: Adding RSS feeds from other blogs to end of my posts
-date: '2023-01-26 21:00:11'
+date: 26.01.2023
+author: Batuhan Y. Yılmaz
 ---
 
 Hey guys I'm Batuhan and at the second post of this day I'm gonna talk about how I added latest posts from the RSS feeds I follow to my blog.

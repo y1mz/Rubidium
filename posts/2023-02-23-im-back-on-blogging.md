@@ -1,7 +1,7 @@
 ---
 title: I'm back on Blogging
-date: '2023-02-23 14:30:00'
-author: Batuhan Yaşar Yılmaz
+date: 23.02.2023
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone I'm Batuhan and today I can't be more happier becouse I'll be able to start on blogging again. So soo much thing happened in the past, huge earthquakes fallen buildings restarting my life from scratch and etc ...

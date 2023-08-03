@@ -7,7 +7,7 @@ const getAboutPageData = () => {
     const folder = "posts/pages/";
     const file = `${folder}about.md`;
     const content = fs.readFileSync(file, "utf8");
-    const fileContents = fs.readFileSync(`posts/pages/about.md`, "utf8");
+    const fileContents = fs.readFileSync(`posts/pages/ack.md`, "utf8");
     const matterResult = matter(fileContents);
     return {
         title: matterResult.data.title,
@@ -20,7 +20,7 @@ function AboutPage() {
     return (
         <div>
             <div className="flex place-content-center p-10 w-full text-3xl">
-                <h1>About.</h1>
+            <h1>{content.title}</h1>
             </div>
             <div className="text-lg max-w-prose mx-auto">
             <article class="prose prose-invert lg:prose-xl 

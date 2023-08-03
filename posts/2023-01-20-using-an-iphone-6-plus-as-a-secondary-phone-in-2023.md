@@ -1,5 +1,7 @@
 ---
 title: Using an iPhone 6 Plus as a secondary phone in 2023
+date: 20.01.2023
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone, I’m Batuhan and this blogpost has written from my new iPhone 6 Plus! I’ve got this phone from my cousin and it’s been used ver carefully and it runs pretty great. And for that I wanted see how it holds up trough a day and for that I carried it with me to the school and it made trough the day without any big problems. Only problem that I had with this phone is it has a defective battery in it and it doesn’t lasts long. Like since the beginning of the test, I had to plug it in for 3 times and charge it up up to 80 percent in order to keep that thing up. Otherwise it works perfectly fine for almost any tasks. Like writing this blogpost on the Evernote app, taking some photos using the camera or listening music trough the Apple Music. 

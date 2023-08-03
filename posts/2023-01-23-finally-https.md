@@ -1,5 +1,7 @@
 ---
 title: Finally HTTPS!
+date: 23.01.2023
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone, I'm Batuhan and today I'm going to talk about how did I got the HTTPS working with my web server over cloudflare tunnel. Before starting that tutorial I should say that what works for me may not work for you, so please think before following these steps, in any case you can always come to our [discord server](https://discord.gg/5p27ZdzQzF) from the About page and get more help from there. So without any further words lets go.

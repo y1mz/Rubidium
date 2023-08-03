@@ -1,5 +1,7 @@
 ---
 title: Configuring Jekyll
+date: 16.06.2022
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone I’m Batuhan and today I’m going to talk about how I configured my Jekyll Blog from it’s stock look and feel to the current look and feel.

@@ -1,5 +1,7 @@
 ---
 title: 'Beginning of the #100DaysToOffload'
+date: 22.01.2023
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone, I'm Batuhan and today I'm going to challenge myself to write 100 blogposts in 2023 and this is the second post of this challenge! If you're wondering what is the first one of this challenge is, it's the post before that post. [(Very very good Engrish momentum :D) Since I'm typing these posts without using any translators or tools like QuillBot or Grammarly to fix my typos and using my own brain to create these sentences. We all could expect some errors because I'm still a newcomer English.] 

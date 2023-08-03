@@ -1,6 +1,7 @@
 ---
 title: Here goes the November 2022
-date: '2022-11-30 14:30:00'
+date: 30.11.2022
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone I'm Batuhan Yılmaz.

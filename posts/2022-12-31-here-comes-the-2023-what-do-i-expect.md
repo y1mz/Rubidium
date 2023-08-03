@@ -1,6 +1,7 @@
 ---
 title: Here comes 2023. What do I expect?
-date: '2022-12-31 01:30:00'
+date: 31.12.2022
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone, I'm Batuhan Yılmaz and as we all know another year has come to it's end. With it's good sides and bad sides it was a good year for me, becouse recovering from the global pandemic and turning back to schools and the social life after 2 years of lockdown was a huge plus for me.  With it's good sides and bad sides it was a good year.

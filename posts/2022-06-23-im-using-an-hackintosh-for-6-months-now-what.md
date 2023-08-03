@@ -1,5 +1,7 @@
 ---
 title: I'm using an Hackintosh for 6 months. Now what?
+date: 23.06.2022
+author: Batuhan Y. Yılmaz
 ---
 
 Hello everyone I'm Batuhan and I'm a Linux user for the past 8 years and I'm using an hackintosh as my daily driver on desktop for 6 months. And I'm always asking myself that question: Now what? Am I gonna ditch the Linux on desktop or just gonna reinstall Fedora? Let's talk about that.

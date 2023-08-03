@@ -22,11 +22,11 @@ const getPostMetadata = () => {
 
 function BlogBox({ posts }) {
     const postMetadata = getPostMetadata();
-    const latestPosts = postMetadata.slice(-6);
+    const latestPosts = postMetadata.slice(-6).reverse();
     const postPreviews = latestPosts.map((post) => (
         <div className="flex">
             <Link href={`/blog/${post.slug}`}>
-            <h2 className="text-lg p-1">{post.date} || {post.title}</h2>
+            <h2 className="text-lg p-1"><b>{post.date}</b> || {post.title}</h2>
             </Link>
         </div>
     ))

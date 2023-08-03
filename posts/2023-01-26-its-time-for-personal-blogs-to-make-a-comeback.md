@@ -1,6 +1,7 @@
 ---
 title: It's time for personal blogs to make a comeback
-date: '2023-01-26 15:32:11'
+date: 26.01.2023
+author: Batuhan Y. Yılmaz
 ---
 
 Hey guys I'm Batuhan and todays blogpost I'm going to talk about why personal blogging should make a comeback. Actually I had been considering to write a blogpost on that topic for some time. When I came across with The Verge's [this post](https://www.theverge.com/23513418/bring-back-personal-blogging) about bringing the blogging back and its importance for the internet. I decided to write my troughs on that. 
