@@ -1,8 +1,10 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import './globals.css';
+import { Inter } from 'next/font/google';
 
-import Header from '@/components/header'
-import Footer from '@/components/footer'
+import Header from '@/components/header';
+import Footer from '@/components/footer';
+
+import { renameEnv } from '@/libs/renameEnv';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,6 +13,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const renameEnvFile = renameEnv();
   return (
     <html lang="en">
       <body className="{inter.className} bg-gray-900 text-white">

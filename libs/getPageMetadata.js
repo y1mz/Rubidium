@@ -1,20 +1,18 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-export const getPostMetadata = () => {
-    const folder = "posts/";
+export const getPageMetadata = () => {
+    const folder = "posts/pages/";
     const files = fs.readdirSync(folder);
     const markdownPosts = files.filter((file) => file.endsWith(".md"));
-    const posts = markdownPosts.map((filename) => {
-        const fileContents = fs.readFileSync(`posts/${filename}`, "utf8");
+    const pages = markdownPosts.map((filename) => {
+        const fileContents = fs.readFileSync(`posts/pages/${filename}`, "utf8");
         const matterResult = matter(fileContents);
         return {
             title: matterResult.data.title,
-            author: matterResult.data.author,
-            date: matterResult.data.date,
             slug: filename.replace(".md", ""),
             content: matterResult.content,
         };
     });
-    return posts;
+    return pages;
 }

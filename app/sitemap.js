@@ -1,21 +1,5 @@
-import fs from "fs"
-import matter from "gray-matter";
-
-const getPostMetadata = () => {
-    const folder = "posts/";
-    const files = fs.readdirSync(folder);
-    const markdownPosts = files.filter((file) => file.endsWith(".md"));
-    const posts = markdownPosts.map((filename) => {
-        const fileContents = fs.readFileSync(`posts/${filename}`, "utf8");
-        const matterResult = matter(fileContents);
-        return {
-            title: matterResult.data.title,
-            date: matterResult.data.date,
-            slug: filename.replace(".md", ""),
-        };
-    });
-    return posts;
-}
+import { getPostMetadata } from "@/libs/getPostMetadata"
+import { getPageMetadata } from "@/libs/getPageMetadata";
 
 export default async function sitemap() {
     const siteURL = process.env.NEXT_PUBLIC_SITE_URL
@@ -27,6 +11,14 @@ export default async function sitemap() {
         }
     });
 
+    const pageMeta = getPageMetadata();
+    const pageMetadata = pageMeta.map((page) => {
+        return {
+            url: `${siteURL}/${page.slug}`,
+            lastModified: new Date()
+        }
+    })
+
     return [
         {
             url: siteURL,
@@ -35,6 +27,7 @@ export default async function sitemap() {
         {
             url: `${siteURL}/about`
         },
+        ...pageMetadata,
         ...postMetadata
     ]
 }

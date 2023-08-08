@@ -2,10 +2,12 @@ import React from "react";
 import Link from "next/link"
 
 function Header() {
+    const SiteName = process.env.NEXT_PUBLIC_SITE_NAME;
+
     return (
         <div className="sticky top-0 mt-5 bg-gray-900">
             <div className="flex justify-between text-xl">
-                <Link href="/" className="">TBN Blog</Link>
+                <Link href="/" className="">{SiteName}</Link>
                 <nav className="flex gap-2">
                     <Link className="hover:underline" href="/blog">Blog.</Link>
                     <Link className="hover:underline" href="/about">About.</Link>
