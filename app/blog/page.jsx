@@ -3,7 +3,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import Link from "next/link";
 
-const getPostMetadata = () => {
+function getPostMetadata() {
     const folder = "posts/";
     const files = fs.readdirSync(folder);
     const markdownPosts = files.filter((file) => file.endsWith(".md"));

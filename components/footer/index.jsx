@@ -6,9 +6,9 @@ function Footer() {
     return (
         <footer className="flex flex-col items-center justify-center text-15 mb-10">
             <div className="flex gap-4 text-sm">
-                <Link href="/">ack.</Link>
-                <Link href="/">links</Link>
-                <Link href="/">blogroll</Link>
+                <Link href="/ack">ack.</Link>
+                <Link href="/links">links</Link>
+                <Link href="/blogroll">blogroll</Link>
                 <Link href="/">rss</Link>
                 <> © 2023</>
             </div>
