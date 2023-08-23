@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
           {
             protocol: 'https',
-            hostname: 'thebatuhansnetwork.xyz',
+            hostname: 'old.thebatuhansnetwork.xyz',
             port: '',
             pathname: '/assets/img/avatar.jpg',
           },
