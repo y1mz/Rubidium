@@ -11,6 +11,14 @@ const getPostContent = (slug) => {
     return matterResult;
 }
 
+export function generateMetadata({ params }) {
+    const slug = params.slug
+    const content = getPostContent(slug)
+    return {
+        title: content.data.title
+    }
+}
+
 function PostPage(props) {
     const slug = props.params.slug;
     const content = getPostContent(slug);
