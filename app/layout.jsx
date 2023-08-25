@@ -4,22 +4,23 @@ import { Inter } from 'next/font/google';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
-import { renameEnv } from '@/libs/renameEnv';
 import { generateRSSFeed } from '@/libs/generateRSS';
+import { readConfig } from '@/libs/readConfig';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
+const config = readConfig();
 
 export const metadata = {
-  title: "The Batuhan's Blog",
+  title: config.siteName,
+  description: config.siteDescription,
 }
 
 export default function RootLayout({ children }) {
-  const renameEnvFile = renameEnv();
   const generateRSS = generateRSSFeed();
   return (
     <html lang="en">
       <body className="{inter.className} bg-gray-900 text-white">
-        <div className="sm:px-20 py-5 min-h-screen px-5">
+        <div className="sm:px-20 md:px-40 lg:px-60 py-5 min-h-screen px-5">
           <Header />
           {children}
         </div>

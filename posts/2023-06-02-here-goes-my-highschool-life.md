@@ -3,22 +3,12 @@ title: Here goes my highschool life
 author: Batuhan Y. Yılmaz <batuhan@thebatuhansnetwork.xyz>
 date: 02.06.2023
 ---
-With it's goods and bads, an entire 4 year journey has ended today and I don't know what to say. It actually started really well and I really wished saying the same thing for ending too. 
-I met lot's of good people in that time and of course I had some people that I wished to never met (Yes I'm talking about you Mis. Pekdemir. FUCK YOU!) and had a great time with them. Having that plandemic and being stuck at home for 1.5 years has took so moch stuff from us but the rest of the 2.5 years were great times an I'm happy becouse it happened and I'm sorry becouse it come to an end.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst quisque sagittis purus. In est ante in nibh mauris cursus mattis molestie a. Fringilla phasellus faucibus scelerisque eleifend. Mi bibendum neque egestas congue quisque egestas diam in arcu. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Dignissim sodales ut eu sem integer. Risus sed vulputate odio ut. In iaculis nunc sed augue lacus viverra vitae congue eu. Sit amet nisl suscipit adipiscing bibendum. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus.
 
-But as always we grown up and time passes and now it's time to be productive, make money and escape matrix like Andrew Tate did lol.
+Fames ac turpis egestas maecenas pharetra convallis posuere morbi leo. Justo nec ultrices dui sapien eget mi proin sed. Quis enim lobortis scelerisque fermentum dui faucibus in. Sapien eget mi proin sed libero enim sed faucibus. Enim facilisis gravida neque convallis a cras semper auctor. Diam vulputate ut pharetra sit amet aliquam. Imperdiet sed euismod nisi porta lorem mollis. Sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Iaculis nunc sed augue lacus viverra vitae congue. Vel pretium lectus quam id leo. Pharetra convallis posuere morbi leo urna molestie. Porttitor rhoncus dolor purus non enim. Nam aliquam sem et tortor consequat id porta. Mattis ullamcorper velit sed ullamcorper. Id volutpat lacus laoreet non curabitur gravida. Volutpat consequat mauris nunc congue nisi. Nunc mattis enim ut tellus elementum sagittis vitae et. Ac ut consequat semper viverra nam libero.
 
-## So what I'm gonna do now?
-- Answer for that question is actually depended so much on which collage I'll go becouse I have 2 plans now.
-- The Plan A is being an electrical engineer and have a carrier based on programming and other stuff.
-- The plan B is studying graphical design and creating my own advertaising businness based on that.
+Libero volutpat sed cras ornare arcu. Nullam ac tortor vitae purus faucibus. Elit scelerisque mauris pellentesque pulvinar pellentesque. Lacus sed turpis tincidunt id aliquet. Est lorem ipsum dolor sit amet consectetur adipiscing. Amet nulla facilisi morbi tempus iaculis urna id volutpat lacus. Pretium fusce id velit ut tortor pretium viverra suspendisse potenti. Dui ut ornare lectus sit amet est placerat. Sem nulla pharetra diam sit amet nisl. Molestie nunc non blandit massa enim nec. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Urna et pharetra pharetra massa massa ultricies mi. Mauris vitae ultricies leo integer.
 
-And much more like that but the thing I know is I'm gonna sucsess and won't let anyone to take me down from the way I wanna go. 
+Nec ullamcorper sit amet risus nullam eget felis. Morbi tristique senectus et netus et malesuada fames ac turpis. Non pulvinar neque laoreet suspendisse. Molestie a iaculis at erat pellentesque adipiscing commodo elit. Nulla posuere sollicitudin aliquam ultrices. Arcu ac tortor dignissim convallis aenean et tortor at. Nullam vehicula ipsum a arcu cursus vitae congue. Amet justo donec enim diam vulputate. In massa tempor nec feugiat nisl pretium fusce id. A lacus vestibulum sed arcu non. Auctor urna nunc id cursus metus aliquam eleifend mi. Venenatis cras sed felis eget velit aliquet. Vitae aliquet nec ullamcorper sit amet. Bibendum est ultricies integer quis auctor elit sed vulputate mi. Diam volutpat commodo sed egestas. Volutpat est velit egestas dui. Ultrices vitae auctor eu augue.
 
-## Acknowledge
-I'm typing this for the everyone who has been with me since the beginning of this 4 year journey. You guys are awesome and I hope you all can live in the perfect life that you're dreaming of. I also want to say a thank you to my English teacher Hatice İşler. Without her I wouldn't be able to write this post in English or have the motivation to learn this language. She helped me and my friends a lot and I hope everything goes well on her side.
-
-
-## Reply via [E-Mail](mailto://batuhan@thebatuhansnetwork.xyz)
-## Thank You!
-Batuhan Yılmaz - 02.06.2023 - 21/100
+Bibendum ut tristique et egestas quis ipsum. Nibh ipsum consequat nisl vel pretium lectus. Mattis pellentesque id nibh tortor id. Pretium viverra suspendisse potenti nullam ac. Adipiscing tristique risus nec feugiat in fermentum posuere urna. Sagittis aliquam malesuada bibendum arcu vitae elementum. Hac habitasse platea dictumst vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Cras tincidunt lobortis feugiat vivamus at. Urna nec tincidunt praesent semper feugiat.

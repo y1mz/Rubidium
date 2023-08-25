@@ -1,8 +1,11 @@
 import { getPostMetadata } from "@/libs/getPostMetadata"
 import { getPageMetadata } from "@/libs/getPageMetadata";
+import { readConfig } from "@/libs/readConfig";
+
+const config = readConfig();
 
 export default async function sitemap() {
-    const siteURL = process.env.NEXT_PUBLIC_SITE_URL
+    const siteURL = config.siteURL
     const postMeta = await getPostMetadata();
     const postMetadata = postMeta.map((post) => {
         return {
