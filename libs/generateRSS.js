@@ -2,6 +2,7 @@ import fs from "fs";
 import { Feed } from "feed";
 import { getPostMetadata } from "@/libs/getPostMetadata";
 import Showdown from "showdown";
+import { readConfig } from "./readConfig";
 
 export async function generateRSSFeed() {
 
@@ -13,13 +14,14 @@ export async function generateRSSFeed() {
 
         return html
     }
+    
+    const config = readConfig();
 
     const metadata = {
-        title: process.env.NEXT_PUBLIC_SITE_NAME,
-        author: process.env.NEXT_PUBLIC_AUTHOR_NAME,
-        description: process.env.NEXT_PUBLIC_SITE_DESCRIPTION,
-        url: process.env.NEXT_PUBLIC_SITE_URL,
-        lang: process.env.NEXT_PUBLIC_SITE_LANGUAGE,
+        title: config.siteName,
+        author: config.authorName,
+        description: config.siteDescription,
+        url: config.siteURL,
     }
 
     const postMetadataReversed = getPostMetadata();
