@@ -2,7 +2,7 @@ import fs from "fs";
 import { Feed } from "feed";
 import { getPostMetadata } from "@/libs/getPostMetadata";
 import Showdown from "showdown";
-import { readConfig } from "./readConfig";
+import config from "@/config/siteconfig.json"
 
 export async function generateRSSFeed() {
 
@@ -14,14 +14,12 @@ export async function generateRSSFeed() {
 
         return html
     }
-    
-    const config = readConfig();
 
     const metadata = {
         title: config.siteName,
         author: config.authorName,
         description: config.siteDescription,
-        url: config.siteURL,
+        url: config.siteUrl,
     }
 
     const postMetadataReversed = getPostMetadata();

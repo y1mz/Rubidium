@@ -1,11 +1,9 @@
 import { getPostMetadata } from "@/libs/getPostMetadata"
 import { getPageMetadata } from "@/libs/getPageMetadata";
-import { readConfig } from "@/libs/readConfig";
-
-const config = readConfig();
+import config from "@/config/siteconfig.json"
 
 export default async function sitemap() {
-    const siteURL = config.siteURL
+    const siteURL = config.siteUrl
     const postMeta = await getPostMetadata();
     const postMetadata = postMeta.map((post) => {
         return {
