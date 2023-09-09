@@ -4,9 +4,9 @@ import { getPostMetadata } from "@/libs/getPostMetadata";
 import Showdown from "showdown";
 import config from "@/config/siteconfig.json"
 
-export async function generateRSSFeed() {
+export async function GET() {
 
-    var converter = new Showdown.Converter()
+    var converter = new Showdown.Converter() 
 
     const mtoh = ({ content }) => {
         const text = content;
@@ -53,8 +53,9 @@ export async function generateRSSFeed() {
             link: url,
             content: mtoh({ content: post.content } ),
             author: post.author,
+            date: new Date(post.date)
         });
     });
 
-    fs.writeFileSync("public/feed.xml", feed.rss2());
+    return new Response(feed.rss2());
 }

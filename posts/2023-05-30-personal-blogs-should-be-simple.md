@@ -1,6 +1,6 @@
 ---
 title: Personal Blogs should be simple
-date: 01.01.1970
+date: 1970-01-01
 author: Batuhan Y. Yilmaz
 ---
 ## Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst quisque sagittis purus. In est ante in nibh mauris cursus mattis molestie a. Fringilla phasellus faucibus scelerisque eleifend. Mi bibendum neque egestas congue quisque egestas diam in arcu. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Dignissim sodales ut eu sem integer. Risus sed vulputate odio ut. In iaculis nunc sed augue lacus viverra vitae congue eu. Sit amet nisl suscipit adipiscing bibendum. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus.

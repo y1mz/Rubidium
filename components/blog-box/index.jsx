@@ -26,7 +26,7 @@ function BlogBox({ posts }) {
     const postPreviews = latestPosts.map((post) => (
         <div className="flex">
             <Link href={`/blog/${post.slug}`}>
-            <h2 className="text-lg p-1"><b>{post.date}</b> || {post.title}</h2>
+            <h2 className="text-lg p-1"><b>{`${new Date(post.date).getDate()}.${new Date(post.date).getMonth()}.${new Date(post.date).getFullYear()}`}</b> || {post.title}</h2>
             </Link>
         </div>
     ))

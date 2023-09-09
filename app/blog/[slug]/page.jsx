@@ -28,7 +28,7 @@ function PostPage(props) {
             <h2>{content.data.title}</h2>
             <div className="flex flex-wrap justify-between mt-2">
                 <p className="text-sm">{content.data.author}</p>
-                <p className="text-sm">{content.data.date}</p>
+                <p className="text-sm">{`${new Date(content.data.date).getDate()}.${new Date(content.data.date).getMonth()}.${new Date(content.data.date).getFullYear()}`}</p>
             </div>
         </div>
         <hr class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>

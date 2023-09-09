@@ -26,7 +26,7 @@ function BlogPage({ posts }) {
     const postPreviews = postMetadata.map((post) => (
         <div className="flex">
         <Link href={`/blog/${post.slug}`}>
-        <li className="text-lg p-1">{post.date} || {post.title}</li>
+        <li className="text-lg p-1">{`${new Date(post.date).getDate()}.${new Date(post.date).getMonth()}.${new Date(post.date).getFullYear()}`} || {post.title}</li>
         </Link>
     </div>
     ))
