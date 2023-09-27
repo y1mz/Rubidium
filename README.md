@@ -27,4 +27,4 @@ I created this site for learning and tried my best. It's a 100% functional websi
 
 I recently wrote a post about how I deploy my own projects on my server. You can [find it from this link.](https://www.thebatuhansnetwork.xyz/blog/2023-09-05-how-i-deploy-my-nextjs)
 
-[]Buy me a coffee!](https://www.buymeacoffee.com/bthyilmaz)
+[Buy me a coffee!](https://www.buymeacoffee.com/bthyilmaz)
