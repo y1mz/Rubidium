@@ -18,7 +18,7 @@ export function generateMetadata({ params }) {
     const content = getPostContent(slug)
 
     const description = () => {
-        const sentences = content.split(/[.!?]/)
+        const sentences = content.content.split(/[.!?]/)
         const preview = sentences.slice(0,2).join("")
         return preview
     }
