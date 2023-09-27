@@ -3,6 +3,8 @@ import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 
+import { getPostMetadata } from "@/libs/getPostMetadata";
+
 const getPostContent = (slug) => {
     const folder = "posts/";
     const file = `${folder}${slug}.md`;
@@ -14,9 +16,24 @@ const getPostContent = (slug) => {
 export function generateMetadata({ params }) {
     const slug = params.slug
     const content = getPostContent(slug)
-    return {
-        title: content.data.title
+
+    const description = () => {
+        const sentences = content.split(/[.!?]/)
+        const preview = sentences.slice(0,2).join("")
+        return preview
     }
+
+    return {
+        title: content.data.title,
+        description: description(),
+    }
+}
+
+export async function generateStaticParams() {
+    const posts = await getPostMetadata()
+    return posts.map((post) => ({
+        slug: post.slug
+    }))
 }
 
 function PostPage(props) {
@@ -25,7 +42,7 @@ function PostPage(props) {
     return (
         <>
         <div className="flex flex-col place-content-center py-10 px-20 w-full text-xl sm:text-3xl">
-            <h2>{content.data.title}</h2>
+            <h1>{content.data.title}</h1>
             <div className="flex flex-wrap justify-between mt-2">
                 <p className="text-sm">{content.data.author}</p>
                 <p className="text-sm">{`${new Date(content.data.date).getDate()}.${new Date(content.data.date).getMonth()}.${new Date(content.data.date).getFullYear()}`}</p>
