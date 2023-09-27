@@ -1,4 +1,4 @@
-# next-js-starter-markdown
+# Rubidium
 A simple markdown based blogsite with RSS feed created using NextJS + TailwindCSS.
 I created this site for learning and tried my best. It's a 100% functional website and you can even customize it and deploy as your own blog site.
 
