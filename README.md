@@ -7,11 +7,12 @@ I created this site for learning and tried my best. It's a 100% functional websi
 - 🔍 SEO Optimized
 - 📺 Simple, fast and responsive design
 - 📬 RSS Feed Support
+- 🔧 Easly configurable
 
 ## Deploying 
 ### On Vercel
 - Fork this repo,
-- Edit the ```config/siteconfig.json``` file according to your needs,
+- Edit the ```config/siteconfig.json``` and ```config/header.json``` file according to your needs,
 - Delete the example posts from ```/posts``` folder and add yours,
 - Edit the pages under ```posts/pages```as you like,
 - Go to [Vercel](https://vercel.com) and add a new project from your forked repo,
@@ -19,7 +20,7 @@ I created this site for learning and tried my best. It's a 100% functional websi
 
 ### On your server:
 - Clone this repo ```git clone https://github.com/B4tuhanY1lmaz/nextjs-starter-markdown```
-- Edit the ```config/siteconfig.json``` file according to your needs,
+- Edit the ```config/siteconfig.json``` and ```config/header.json``` file according to your needs,
 - Delete the example posts from ```/posts``` folder and add yours.
 - Edit the pages under ```posts/pages```as you like
 - Run the command ```yarn install && yarn build``` to build it locally
