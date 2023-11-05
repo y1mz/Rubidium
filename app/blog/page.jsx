@@ -25,9 +25,9 @@ function BlogPage({ posts }) {
     const postMetadata = postMetadataReversed.slice().reverse();
     const postPreviews = postMetadata.map((post) => (
         <div className="flex">
-        <Link href={`/blog/${post.slug}`}>
-        <li className="text-lg p-1">{`${new Date(post.date).getDate()}.${new Date(post.date).getMonth()}.${new Date(post.date).getFullYear()}`} || {post.title}</li>
-        </Link>
+            <Link href={`/blog/${post.slug}`}>
+                <li className="text-xl p-1"><b>{`${new Date(post.date).toDateString()}`}</b> || {post.title}</li>
+            </Link>
     </div>
     ))
 
@@ -36,7 +36,7 @@ function BlogPage({ posts }) {
             <div className="flex place-content-center px-10 py-20 w-full text-3xl">
                 <h1>Blog.</h1>
             </div>
-            <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
+            <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
             <div className="mx-auto max-w-prose text-xl">
                 {postPreviews}
             </div>
