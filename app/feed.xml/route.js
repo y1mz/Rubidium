@@ -52,7 +52,7 @@ export async function GET() {
             id: url,
             link: url,
             content: mtoh({ content: post.content } ),
-            author: post.author,
+            author: config.authorName,
             date: new Date(post.date)
         });
     });
