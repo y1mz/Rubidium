@@ -5,5 +5,6 @@
     "authorName": "NextJS Starter Markdown",
     "authorBio": "A Markdown based blog site created by a beginner for beginners. It's build with the idea of keeping it simple and the source code is very simple to read and understand. Read more over at Github from the link down below.",
     "authorEmail": "mail.example.com",
+    "authorImage" : "/assets/img/avatar.png",
     "year": "2023"
 }

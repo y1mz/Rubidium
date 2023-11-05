@@ -2,9 +2,10 @@ import React from "react";
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
-
 import { readConfig } from "@/libs/readConfig";
 import { getPostMetadata } from "@/libs/getPostMetadata";
+
+import AuthorHoverCard from "@/components/AuthorHoverCard";
 
 const getPostContent = (slug) => {
     const folder = "posts/";
@@ -46,7 +47,7 @@ function PostPage(props) {
         <div className="flex flex-col place-content-center py-10 px-0 sm:px-10 md:px-20 w-full text-xl sm:text-2xl md:text-3xl">
             <h1 className="font-bold">{content.data.title}</h1>
             <div className="flex flex-wrap justify-between mt-2">
-                <p className="text-sm"><b className="text-md">{config.authorName}</b> {`<${config.authorEmail}>`}</p>
+                <AuthorHoverCard />
                 <p className="text-sm">{`${new Date(content.data.date).toDateString()}`}</p>
             </div>
         </div>
