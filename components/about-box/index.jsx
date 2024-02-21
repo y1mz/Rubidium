@@ -1,6 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+
+import AboutLinks from "@/components/about-box/about-links"
 
 import { BsMastodon } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
@@ -13,9 +15,10 @@ function AboutBox({ pp, name, description }) {
                 <div className="flex flex-col gap-5">
                     <h4 className="text-2xl">{name}</h4>
                     <p className="max-w-md text-base">{description}</p>
-                    <div className="flex gap-5 text-xl justify-center"> 
-                        <a href="https://github.com/B4tuhanY1lmaz/nextjs-starter-markdown"><BsGithub /></a> 
-                        <a href="https://fosstodon.org/@B4tuhanY1lmaz"><BsMastodon /></a> 
+                    <div className="justify-center">
+                        <AboutLinks
+                            title="Titlee"
+                        />
                     </div>
                 </div>
             </div>

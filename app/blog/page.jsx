@@ -1,35 +1,11 @@
-import React from "react";
-import fs from "fs";
-import matter from "gray-matter";
-import Link from "next/link";
+import Link from "next/link"
+import PostEntry from "@/components/blog-box/post-entry"
 
-function getPostMetadata() {
-    const folder = "posts/";
-    const files = fs.readdirSync(folder);
-    const markdownPosts = files.filter((file) => file.endsWith(".md"));
-    const posts = markdownPosts.map((filename) => {
-        const fileContents = fs.readFileSync(`posts/${filename}`, "utf8");
-        const matterResult = matter(fileContents);
-        return {
-            title: matterResult.data.title,
-            author: matterResult.data.author,
-            date: matterResult.data.date,
-            slug: filename.replace(".md", ""),
-        };
-    });
-    return posts;
-}
+import {getPostMetadata} from "@/libs/getPostMetadata"
 
 function BlogPage({ posts }) {
     const postMetadataReversed = getPostMetadata();
     const postMetadata = postMetadataReversed.slice().reverse();
-    const postPreviews = postMetadata.map((post) => (
-        <div className="flex">
-            <Link href={`/blog/${post.slug}`}>
-                <li className="text-xl p-1"><b>{`${new Date(post.date).toDateString()}`}</b> || {post.title}</li>
-            </Link>
-    </div>
-    ))
 
     return (
         <div>
@@ -38,7 +14,14 @@ function BlogPage({ posts }) {
             </div>
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
             <div className="mx-auto max-w-prose text-xl">
-                {postPreviews}
+                {postMetadata.map((post) => (
+                    <PostEntry
+                        title={post.title}
+                        date={post.date}
+                        link={`/blog/${post.slug}`}
+                        key={post.title}
+                    />
+                ))}
             </div>
         </div>
     )

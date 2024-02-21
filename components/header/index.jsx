@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import HeaderButton from "@/components/header/header-button"
 import Link from "next/link"
 
 import { readConfig, readHeaderLinks } from "@/libs/readConfig";
@@ -12,15 +12,21 @@ function Header() {
 
     return (
         <div className="sticky top-0 bg-gray-900">
-            <div className="flex justify-between text-xl py-1">
-                <Link href="/" className="">{config.siteName}</Link>
+            <div className="flex justify-between text-xl pb-1">
+                <HeaderButton
+                    title={config.siteName}
+                    link={"/"}
+                />
                 <nav className="flex gap-2">
                     {links.map((link) => (
-                        <Link className="hover:underline" href={link.link}>{link.title}</Link>
+                        <HeaderButton
+                            title={link.title}
+                            link={link.link}
+                        />
                     ))}
                 </nav>
             </div>
-            <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
+            <hr className="h-px bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
         </div>
     )
 }

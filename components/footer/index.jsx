@@ -13,7 +13,7 @@ function Footer() {
         <footer className="flex flex-col items-center justify-center text-15 mb-10">
             <div className="flex gap-4 text-sm">
                 {links.map((link) => (
-                    <Link className="hover:underline" href={link.link}>{link.title}</Link>
+                    <Link className="hover:underline" href={link.link} key={link.link}>{link.title}</Link>
                 ))}
                 <> © {config.year}</>
             </div>

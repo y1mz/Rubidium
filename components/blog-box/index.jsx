@@ -1,45 +1,31 @@
-import React from "react";
-import fs from "fs";
-import matter from "gray-matter";
-import Link from "next/link";
+import Link from "next/link"
+import PostEntry from "@/components/blog-box/post-entry"
+import { IoIosArrowForward } from "react-icons/io"
 
-const getPostMetadata = () => {
-    const folder = "posts/";
-    const files = fs.readdirSync(folder);
-    const markdownPosts = files.filter((file) => file.endsWith(".md"));
-    const posts = markdownPosts.map((filename) => {
-        const fileContents = fs.readFileSync(`posts/${filename}`, "utf8");
-        const matterResult = matter(fileContents);
-        return {
-            title: matterResult.data.title,
-            author: matterResult.data.author,
-            date: matterResult.data.date,
-            slug: filename.replace(".md", ""),
-        };
-    });
-    return posts;
-}
+import { getPostMetadata } from "@/libs/getPostMetadata"
 
 function BlogBox({ posts }) {
-    const postMetadata = getPostMetadata();
-    const latestPosts = postMetadata.slice(-6).reverse();
-    const postPreviews = latestPosts.map((post) => (
-        <div className="flex">
-            <Link href={`/blog/${post.slug}`}>
-            <h2 className="text-lg p-1"><b>{`${new Date(post.date).toDateString()}`}</b> || {post.title}</h2>
-            </Link>
-        </div>
-    ))
+    const latestPosts = getPostMetadata().slice(-6).reverse()
+
     return (
         <div className="mx-auto flex flex-col gap-4">
             <div>
-                <h2 className="text-2xl">Latest from Blog</h2>
+                <h2 className="text-2xl text-center font-bold">Latest from Blog</h2>
             </div>
             <div>
-                {postPreviews}
+                {latestPosts.map((post) => (
+                    <PostEntry
+                        title={post.title}
+                        link={`/blog/${post.slug}`}
+                        date={post.date}
+                        key={post.title}
+                    />
+                ))}
             </div>
             <div>
-                <Link href="/blog" className="text-2xl hover:underline"><b>Read more ...</b></Link>
+                <Link href="/blog" className="text-2xl hover:bg-gray-800 p-2 text-center rounded-xl font-bold flex items-center">
+                    <p className="mr-1">Older posts</p><IoIosArrowForward />
+                </Link>
             </div>
         </div>
     )

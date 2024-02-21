@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="{inter.className} bg-gray-900 text-white">
-        <div className="sm:px-20 md:px-40 lg:px-60 py-5 min-h-screen px-5">
+        <div className="max-w-[900px] mx-auto py-5 min-h-screen px-5">
           <Header />
           {children}
         </div>
