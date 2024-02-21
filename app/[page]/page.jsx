@@ -1,14 +1,11 @@
-import React from "react";
-import fs from "fs";
-import Markdown from "markdown-to-jsx";
-import matter from "gray-matter";
+import Markdown from "markdown-to-jsx"
+import { getPageMetadata, getPageContent } from "@/libs/getPageMetadata"
 
-const getPageContent = (page) => {
-    const folder = "posts/pages/";
-    const file = `${folder}${page}.md`;
-    const content = fs.readFileSync(file, "utf8");
-    const matterResult = matter(content)
-    return matterResult;
+export async function generateStaticParams() {
+    const pages = await getPageMetadata()
+    return pages.map((page) => ({
+        slug: page.slug
+    }))
 }
 
 function Pages(props) {

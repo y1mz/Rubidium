@@ -1,19 +1,8 @@
-import React from "react";
-import fs from "fs";
 import Markdown from "markdown-to-jsx";
-import matter from "gray-matter";
 import { readConfig } from "@/libs/readConfig";
-import { getPostMetadata } from "@/libs/getPostMetadata";
+import { getPostMetadata, getPostContent } from "@/libs/getPostMetadata";
 
 import AuthorHoverCard from "@/components/AuthorHoverCard";
-
-const getPostContent = (slug) => {
-    const folder = "posts/";
-    const file = `${folder}${slug}.md`;
-    const content = fs.readFileSync(file, "utf8");
-    const matterResult = matter(content)
-    return matterResult;
-}
 
 export function generateMetadata({ params }) {
     const slug = params.slug
@@ -21,8 +10,7 @@ export function generateMetadata({ params }) {
 
     const description = (slug) => {
         const sentences = content.content.split(/[.!?]/)
-        const preview = sentences.slice(0,2).join("")
-        return preview
+        return sentences.slice(0,2).join("")
     }
 
     return {

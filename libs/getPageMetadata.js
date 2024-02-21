@@ -16,3 +16,10 @@ export const getPageMetadata = () => {
     });
     return pages;
 }
+
+export const getPageContent = (page) => {
+    const folder = "posts/pages/";
+    const file = `${folder}${page}.md`;
+    const content = fs.readFileSync(file, "utf8");
+    return matter(content)
+}
