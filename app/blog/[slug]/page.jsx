@@ -1,8 +1,9 @@
-import Markdown from "markdown-to-jsx";
-import { readConfig } from "@/libs/readConfig";
-import { getPostMetadata, getPostContent } from "@/libs/getPostMetadata";
+import Markdown from "markdown-to-jsx"
+import { readConfig } from "@/libs/readConfig"
+import { getPostMetadata, getPostContent } from "@/libs/getPostMetadata"
+import { notFound } from "next/navigation"
 
-import AuthorHoverCard from "@/components/AuthorHoverCard";
+import AuthorHoverCard from "@/components/AuthorHoverCard"
 
 export function generateMetadata({ params }) {
     const slug = params.slug
@@ -21,6 +22,7 @@ export function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
     const posts = await getPostMetadata()
+
     return posts.map((post) => ({
         slug: post.slug
     }))
@@ -30,6 +32,11 @@ function PostPage(props) {
     const config = readConfig()
     const slug = props.params.slug;
     const content = getPostContent(slug);
+
+    if (!content) {
+        return notFound()
+    }
+
     return (
         <>
         <div className="flex flex-col place-content-center py-10 px-0 sm:px-10 md:px-20 w-full text-xl sm:text-2xl md:text-3xl">

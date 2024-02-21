@@ -1,5 +1,6 @@
 import Markdown from "markdown-to-jsx"
 import { getPageMetadata, getPageContent } from "@/libs/getPageMetadata"
+import { notFound } from "next/navigation"
 
 export async function generateStaticParams() {
     const pages = await getPageMetadata()
@@ -9,8 +10,13 @@ export async function generateStaticParams() {
 }
 
 function Pages(props) {
-    const page = props.params.page;
-    const content = getPageContent(page);
+    const page = props.params.page
+    const content = getPageContent(page)
+
+    if (!content) {
+        return notFound()
+    }
+
     return (
         <>
             <div className="flex place-content-center p-10 w-full text-3xl">
