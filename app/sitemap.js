@@ -25,9 +25,6 @@ export default async function sitemap() {
             url: siteURL,
             lastModified: new Date(),
         },
-        {
-            url: `${siteURL}/about`
-        },
         ...pageMetadata,
         ...postMetadata
     ]

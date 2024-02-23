@@ -17,6 +17,12 @@ export function generateMetadata({ params }) {
     return {
         title: content.data.title,
         description: description(),
+        openGraph: {
+            title: content.data.title,
+            description: description(),
+            type: "website",
+            publishedTime: content.data.date
+        }
     }
 }
 
