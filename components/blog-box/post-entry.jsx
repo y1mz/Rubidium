@@ -10,9 +10,8 @@ function PostEntry({ title, date, link }) {
     return (
         <div className="rounded-xl hover:bg-gray-800">
             <Link href={link}>
-                <div className="flex gap-2 py-2 px-2">
-                    <p className="font-bold mr-2">{`${finalDate}`}</p>
-                    <p>{title}</p>
+                <div className="py-2 px-2">
+                    <p className="flex gap-2"><b className="font-bold">{finalDate}</b><p>{title}</p></p>
                 </div>
             </Link>
         </div>

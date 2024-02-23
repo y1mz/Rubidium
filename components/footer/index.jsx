@@ -15,7 +15,7 @@ function Footer() {
                 {links.map((link) => (
                     <Link className="hover:underline" href={link.link} key={link.link}>{link.title}</Link>
                 ))}
-                <> © {config.year}</>
+                <> © {new Date().getFullYear()}</>
             </div>
             <div className="text-xs text-gray-400">Made by <Link className="underline" href="https://github.com/B4tuhanY1lmaz">Batuhan Y. Yilmaz</Link> using NextJS by Vercel.</div>
         </footer>

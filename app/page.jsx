@@ -18,7 +18,7 @@ export default function Home() {
       pp={pp}
       name={name}
       description={bio}
-      github={config.github}
+      links={config.links}
       />
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
       <BlogBox />

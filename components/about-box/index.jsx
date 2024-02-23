@@ -1,13 +1,7 @@
-import React from "react"
 import Image from "next/image"
-import Link from "next/link"
-
 import AboutLinks from "@/components/about-box/about-links"
 
-import { BsMastodon } from "react-icons/bs";
-import { BsGithub } from "react-icons/bs";
-
-function AboutBox({ pp, name, description }) {
+function AboutBox({ pp, name, description, links }) {
     return (
         <div className="mx-auto my-28">
             <div className="flex flex-wrap gap-5 text-center justify-center">
@@ -15,10 +9,14 @@ function AboutBox({ pp, name, description }) {
                 <div className="flex flex-col gap-5">
                     <h4 className="text-2xl">{name}</h4>
                     <p className="max-w-md text-base">{description}</p>
-                    <div className="justify-center">
-                        <AboutLinks
-                            title="Titlee"
-                        />
+                    <div className="justify-center flex gap-1">
+                        {links.map((link) => (
+                            <AboutLinks
+                                title={link.title}
+                                link={link.link}
+                                key={link.link}
+                            />
+                        ))}
                     </div>
                 </div>
             </div>

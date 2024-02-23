@@ -9,7 +9,7 @@ export function readConfig() {
         authorName: config.authorName,
         authorBio: config.authorBio,
         authorEmail: config.authorEmail,
-        year: config.year,
+        links: config.links
     }
 }
 
