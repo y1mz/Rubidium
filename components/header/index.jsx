@@ -16,12 +16,15 @@ function Header() {
                 <HeaderButton
                     title={config.siteName}
                     link={"/"}
+                    type="header"
                 />
                 <nav className="flex gap-2">
                     {links.map((link) => (
                         <HeaderButton
                             title={link.title}
                             link={link.link}
+                            type="button"
+                            key={link.link}
                         />
                     ))}
                 </nav>
