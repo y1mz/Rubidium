@@ -26,13 +26,13 @@ export function generateMetadata({ params }) {
     }
 }
 
-export async function generateStaticParams() {
+ export async function generateStaticParams() {
     const posts = await getPostMetadata()
 
-    return posts.map((post) => ({
-        slug: post.slug
-    }))
-}
+     return posts.map((post) => ({
+         slug: post.slug
+     }))
+ }
 
 function PostPage(props) {
     const config = readConfig()

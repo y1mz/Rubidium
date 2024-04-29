@@ -3,10 +3,12 @@ import React from "react";
 import AboutBox from '@/components/about-box';
 import BlogBox from '@/components/blog-box';
 
-import { readConfig } from "@/libs/readConfig";
+import { readConfig } from "@/libs/readConfig"
+import { readHeaderLinks } from "@/libs/readConfig"
 
 export default function Home() {
   const config = readConfig()
+  const headerLinks = readHeaderLinks()
   
   const bio = config.authorBio
   const name = config.authorName
@@ -19,9 +21,11 @@ export default function Home() {
       name={name}
       description={bio}
       links={config.links}
+      header={headerLinks}
       />
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
-      <BlogBox />
+      <div className="max-w-[768px] px-5 py-5 mx-auto">
+          <BlogBox />
+      </div>
     </div>
   )
 }
