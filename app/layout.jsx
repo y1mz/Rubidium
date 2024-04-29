@@ -14,7 +14,6 @@ const websiteURL = process.env.NODE_ENV === 'production'
     : 'http://localhost:3000/'
 
 export const metadata = {
-  metadataBase: new URL(websiteURL),
   title: config.siteName,
   description: config.siteDescription,
   openGraph: {
@@ -27,10 +26,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="{inter.className} bg-gray-900 text-white">
-        <div className="max-w-[900px] mx-auto py-5 min-h-screen px-5">
-          <Header />
+        <div className="justify-center mx-auto min-h-screen">
           {children}
         </div>
         <Footer />

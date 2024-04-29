@@ -11,7 +11,7 @@ function PostEntry({ title, date, link }) {
         <div className="rounded-xl hover:bg-gray-800">
             <Link href={link}>
                 <div className="py-2 px-2">
-                    <p className="flex gap-2"><b className="font-bold">{finalDate}</b><p>{title}</p></p>
+                    <div className="flex gap-2"><b className="font-bold"><p>{finalDate}</p></b><p>{title}</p></div>
                 </div>
             </Link>
         </div>
