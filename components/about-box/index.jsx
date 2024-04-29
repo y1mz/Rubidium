@@ -1,3 +1,5 @@
+"use client"
+
 import AboutLinks from "@/components/about-box/about-links"
 import {Boxes} from "@/components/about-box/boxes"
 

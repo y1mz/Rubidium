@@ -20,12 +20,12 @@ function Pages(props) {
     return (
         <>
             <div className="flex place-content-center p-10 w-full text-3xl">
-            <h1>{content.data.title}</h1>
+                <h1>{content.data.title}</h1>
             </div>
             <div className="text-lg max-w-prose mx-auto">
-            <article className="prose prose-invert lg:prose-xl ">
-                <Markdown>{content.content}</Markdown>
-            </article>
+                <article className="prose prose-invert lg:prose-xl ">
+                    <Markdown>{content.content}</Markdown>
+                </article>
             </div>
         </>
     )
