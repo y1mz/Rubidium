@@ -23,7 +23,7 @@ function Pages(props) {
             <h1>{content.data.title}</h1>
             </div>
             <div className="text-lg max-w-prose mx-auto">
-            <article class="prose prose-invert lg:prose-xl ">
+            <article className="prose prose-invert lg:prose-xl ">
                 <Markdown>{content.content}</Markdown>
             </article>
             </div>
