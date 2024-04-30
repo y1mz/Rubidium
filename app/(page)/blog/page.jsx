@@ -1,4 +1,5 @@
 import PostEntry from "@/components/blog-box/post-entry"
+import Header from "@/components/header"
 
 import { getPostMetadata } from "@/libs/getPostMetadata"
 
@@ -8,6 +9,7 @@ function BlogPage() {
 
     return (
         <div>
+            <Header path="Blog" pathLink={"/blog"} />
             <div className="flex place-content-center px-10 py-20 w-full text-3xl">
                 <h1>Blog</h1>
             </div>

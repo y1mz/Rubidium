@@ -2,6 +2,8 @@ import Markdown from "markdown-to-jsx"
 import { getPageMetadata, getPageContent } from "@/libs/getPageMetadata"
 import { notFound } from "next/navigation"
 
+import Header from "@/components/header"
+
 export async function generateStaticParams() {
     const pages = await getPageMetadata()
     return pages.map((page) => ({
@@ -19,6 +21,7 @@ function Pages(props) {
 
     return (
         <>
+            <Header path={content.data.title} pathLink={`/${page}`}/>
             <div className="flex place-content-center p-10 w-full text-3xl">
                 <h1>{content.data.title}</h1>
             </div>

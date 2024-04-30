@@ -4,6 +4,7 @@ import { getPostMetadata, getPostContent } from "@/libs/getPostMetadata"
 import { notFound } from "next/navigation"
 
 import AuthorHoverCard from "@/components/AuthorHoverCard"
+import Header from "@/components/header"
 
 export function generateMetadata({ params }) {
     const slug = params.slug
@@ -45,6 +46,7 @@ function PostPage(props) {
 
     return (
         <>
+            <Header path="Blog" pathLink={"/blog"} />
         <div className="flex flex-col place-content-center py-10 px-0 sm:px-10 md:px-20 w-full text-xl sm:text-2xl md:text-3xl">
             <h1 className="font-bold">{content.data.title}</h1>
             <div className="flex flex-wrap justify-between mt-2">
