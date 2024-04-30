@@ -1,5 +1,6 @@
 import Link from "next/link"
 import PostEntry from "@/components/blog-box/post-entry"
+import HomepageBlogCard from "@/components/blog-box/homepage-blog-card"
 import { IoIosArrowForward } from "react-icons/io"
 
 import { getPostMetadata } from "@/libs/getPostMetadata"
@@ -10,15 +11,15 @@ function BlogBox({ posts }) {
     return (
         <div className="mx-auto flex flex-col gap-4">
             <div>
-                <h2 className="text-2xl text-center font-bold">Latest from Blog</h2>
+                <h2 className="text-2xl font-mono">Latest from Blog</h2>
             </div>
-            <div>
-                {latestPosts.map((post) => (
-                    <PostEntry
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                {latestPosts.map((post, index) => (
+                    <HomepageBlogCard
                         title={post.title}
                         link={`/blog/${post.slug}`}
                         date={post.date}
-                        key={post.title}
+                        key={index}
                     />
                 ))}
             </div>

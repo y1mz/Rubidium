@@ -1,7 +1,7 @@
 import React from "react";
 
 import AboutBox from '@/components/about-box';
-import BlogBox from '@/components/blog-box';
+import BlogBox from '@/components/blog-box'
 
 import { readConfig } from "@/libs/readConfig"
 import { readHeaderLinks } from "@/libs/readConfig"
@@ -23,7 +23,7 @@ export default function Home() {
       links={config.links}
       header={headerLinks}
       />
-      <div className="max-w-[768px] px-5 py-5 mx-auto">
+      <div className="max-w-[960px] px-5 py-5 mx-auto">
           <BlogBox />
       </div>
     </div>
