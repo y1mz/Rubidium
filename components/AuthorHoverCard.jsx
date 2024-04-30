@@ -1,11 +1,8 @@
-"use client"
-
 import { readConfig } from "@/libs/readConfig"
 
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import React from "react";
 
 function AuthorHoverCard() {
     const config = readConfig()

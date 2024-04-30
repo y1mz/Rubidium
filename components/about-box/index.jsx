@@ -2,7 +2,7 @@ import AboutLinks from "@/components/about-box/about-links"
 import HomeHeader from "@/components/about-box/header"
 import {Boxes} from "@/components/about-box/boxes"
 
-function AboutBox({ pp, name, description, links, header }) {
+function AboutBox({ name, description, links, header }) {
     return (
         <div className="w-full h-screen">
             <div className="relative overflow-hidden w-full mx-auto h-full px-5">
@@ -16,9 +16,10 @@ function AboutBox({ pp, name, description, links, header }) {
                     <div className="absolute bottom-4 inset-x-0 px-5">
                         <div className="flex flex-wrap items-center relative z-20">
                             <div className="flex-col">
-                                <p className="font-light tracking-wider text-2xl">Hi There!</p>
+                                <p className="font-light tracking-wider text-2xl hover:translate-x-3 transition duration-200">Hi There!</p>
                                 <h2 className="flex gap-3 items-center font-semibold text-6xl">I'm <p
-                                    className="font-bold tracking-tighter text-6xl text-transparent bg-clip-text inline-block bg-gradient-to-r from-indigo-400 to-rose-400"
+                                    className="font-bold tracking-tighter text-6xl text-transparent bg-clip-text inline-block bg-gradient-to-r from-indigo-400 to-rose-400
+                                    hover:-translate-y-1 transition duration-200"
                                 >
                                     {name}!
                                 </p>
