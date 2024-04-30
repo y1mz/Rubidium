@@ -1,6 +1,5 @@
-"use client"
-
 import AboutLinks from "@/components/about-box/about-links"
+import HomeHeader from "@/components/about-box/header"
 import {Boxes} from "@/components/about-box/boxes"
 
 function AboutBox({ pp, name, description, links, header }) {
@@ -11,12 +10,8 @@ function AboutBox({ pp, name, description, links, header }) {
                     <Boxes />
                 </div>
                 <div className="relative top-0 bottom-32 inset-x-0 h-full px-5">
-                    <div className="absolute top-4 inset-x-0 z-30">
-                        <div className="flex gap-6 justify-center font-light text-xl">
-                            {header.map((head) => (
-                                <a href={head.link} key={head.link}>{head.title}</a>
-                            ))}
-                        </div>
+                    <div className="absolute top-6 inset-x-0 z-30">
+                        <HomeHeader header={header} />
                     </div>
                     <div className="absolute bottom-4 inset-x-0 px-5">
                         <div className="flex flex-wrap items-center relative z-20">
