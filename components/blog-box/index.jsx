@@ -9,7 +9,7 @@ function BlogBox({ posts }) {
     const latestPosts = getPostMetadata().slice(-6).reverse()
 
     return (
-        <div className="mx-auto flex flex-col gap-4">
+        <div id="blogbox" className="mx-auto flex flex-col gap-4 py-10">
             <div>
                 <h2 className="text-2xl font-mono">Latest from Blog</h2>
             </div>
