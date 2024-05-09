@@ -1,5 +1,5 @@
-import config from "@/config/siteconfig.json"
-import links from "@/config/header.json"
+import config from "&/config/siteconfig.json"
+import links from "&/config/header.json"
 
 export function readConfig() {
     return {

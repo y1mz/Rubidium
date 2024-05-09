@@ -1,6 +1,6 @@
 import { getPostMetadata } from "@/libs/getPostMetadata"
 import { getPageMetadata } from "@/libs/getPageMetadata";
-import config from "@/config/siteconfig.json"
+import config from "&/config/siteconfig.json"
 
 export default async function sitemap() {
     const siteURL = config.siteUrl

@@ -1,8 +1,7 @@
-import fs from "fs";
-import { Feed } from "feed";
-import { getPostMetadata } from "@/libs/getPostMetadata";
-import Showdown from "showdown";
-import config from "@/config/siteconfig.json"
+import { Feed } from "feed"
+import { getPostMetadata } from "@/libs/getPostMetadata"
+import Showdown from "showdown"
+import config from "&/config/siteconfig.json"
 
 export async function GET() {
 
@@ -10,9 +9,7 @@ export async function GET() {
 
     const mtoh = ({ content }) => {
         const text = content;
-        const html = converter.makeHtml(text);
-
-        return html
+        return converter.makeHtml(text);
     }
 
     const metadata = {
