@@ -1,7 +1,7 @@
 {
-  "name": "blog-site",
-  "version": "0.1.0",
-  "private": true,
+  "name": "rubidium",
+  "version": "1.2.0",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
