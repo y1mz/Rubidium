@@ -2,6 +2,7 @@ import Markdown from "markdown-to-jsx"
 import { readConfig } from "@/libs/readConfig"
 import { getPostMetadata, getPostContent } from "@/libs/getPostMetadata"
 import { notFound } from "next/navigation"
+import Showdown from "showdown"
 
 import AuthorHoverCard from "@/components/AuthorHoverCard"
 import Header from "@/components/header"
@@ -9,15 +10,19 @@ import Header from "@/components/header"
 export function generateMetadata({ params }) {
     const slug = params.slug
     const content = getPostContent(slug)
+    const config = readConfig()
 
-    const description = (slug) => {
-        const sentences = content.content.split(/[.!?]/)
-        return sentences.slice(0,2).join("")
+    const description = () => {
+        const sentences = content.content.split(/[.!?#]/).slice(0,2).join("")
+        const converter = new Showdown.Converter()
+        const result = converter.makeHtml(sentences)
+        return result.replace(/<[^>]*>/g, "")
     }
 
     return {
-        title: content.data.title,
+        title: `${content.data.title} - ${config.siteName}`,
         description: description(),
+        authors: [{ name: config.authorName, url: `https://${config.siteURL}` }],
         openGraph: {
             title: content.data.title,
             description: description(),

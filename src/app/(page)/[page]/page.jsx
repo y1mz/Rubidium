@@ -1,7 +1,7 @@
 import Markdown from "markdown-to-jsx"
 import { getPageMetadata, getPageContent } from "@/libs/getPageMetadata"
+import { readConfig } from "@/libs/readConfig"
 import { notFound } from "next/navigation"
-
 import Header from "@/components/header"
 
 export async function generateStaticParams() {
@@ -9,6 +9,20 @@ export async function generateStaticParams() {
     return pages.map((page) => ({
         slug: page.slug
     }))
+}
+
+export async function generateMetadata({ params }) {
+    const page = params.page
+    const contentData = getPageContent(page).data
+    const config = readConfig()
+    const siteUrl = "https://" + config.siteURL
+
+    return {
+        title: `${contentData.title} - ${readConfig().siteName}`,
+        description: contentData.description,
+        modifiedTime: new Date().toISOString(),
+        authors: [{name: config.authorName, url: siteUrl }]
+    }
 }
 
 function Pages(props) {

@@ -4,7 +4,7 @@ import links from "&/config/header.json"
 export function readConfig() {
     return {
         siteName: config.siteName,
-        siteURL: config.siteURL,
+        siteURL: config.siteUrl,
         siteDescription: config.siteDescription,
         authorName: config.authorName,
         authorBio: config.authorBio,

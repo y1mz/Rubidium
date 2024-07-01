@@ -2,6 +2,12 @@ import PostEntry from "@/components/blog-box/post-entry"
 import Header from "@/components/header"
 
 import { getPostMetadata } from "@/libs/getPostMetadata"
+import { readConfig } from "@/libs/readConfig"
+
+export const metadata = {
+    title: `Blog - ${readConfig().siteName}`,
+    modifiedTime: getPostMetadata().slice().reverse()[0].date
+}
 
 function BlogPage() {
     const postMetadataReversed = getPostMetadata();

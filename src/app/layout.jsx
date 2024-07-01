@@ -8,17 +8,14 @@ import { readConfig } from '@/libs/readConfig';
 const inter = Inter({ subsets: ['latin'] });
 const config = readConfig();
 
-const websiteURL = process.env.NODE_ENV === 'production'
-    ? `${config.siteURL}`
-    : 'http://localhost:3000/'
-
 export const metadata = {
   title: config.siteName,
   description: config.siteDescription,
+  metadataBase: new URL("https://" + config.siteURL),
   openGraph: {
     title: config.siteName,
     description: config.siteDescription,
-    url: websiteURL,
+    url: config.siteURL,
     modifiedTime: new Date().toISOString()
   }
 }
@@ -26,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="{inter.className} bg-gray-900 text-white">
+      <body className={`${inter.className} bg-gray-900 text-white`}>
         <div className="justify-center mx-auto min-h-screen">
           {children}
         </div>
