@@ -1,4 +1,4 @@
-import PostEntry from "@/components/blog-box/post-entry"
+import HomepageBlogCard from "@/components/blog-box/homepage-blog-card"
 import Header from "@/components/header"
 
 import { getPostMetadata } from "@/libs/getPostMetadata"
@@ -20,13 +20,13 @@ function BlogPage() {
                 <h1>Blog</h1>
             </div>
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
-            <div className="mx-auto max-w-prose text-xl">
-                {postMetadata.map((post) => (
-                    <PostEntry
+            <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                {postMetadata.map((post, index) => (
+                    <HomepageBlogCard
+                        key={index}
                         title={post.title}
-                        date={post.date}
                         link={`/blog/${post.slug}`}
-                        key={post.title}
+                        date={post.date}
                     />
                 ))}
             </div>

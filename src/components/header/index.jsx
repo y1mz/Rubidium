@@ -4,7 +4,7 @@ import { MdRssFeed } from "react-icons/md"
 
 import { readConfig } from '@/libs/readConfig'
 
-function Header({ path, pathLink }) {
+function Header({ path, pathLink, blogLink, blogTitle }) {
     const config = readConfig()
 
     return (
@@ -13,13 +13,22 @@ function Header({ path, pathLink }) {
                 <div className="flex">
                     <Button variant="ghost3" size="sm2" asChild><Link href={"/"}>{config.siteName}</Link></Button>
                     <p>/</p>
-                    {path ? (
-                        <Button variant="ghost3" size="sm2" asChild><Link href={pathLink}>{path}</Link></Button>
-                    ): (
-                        <></>
+                    {path && (
+                        <>
+                            <Button variant="ghost3" size="sm2" asChild><Link href={pathLink}>{path}</Link></Button>
+
+                        </>
+                    )}
+                    {blogLink && (
+                        <nav className="hidden md:flex">
+                            <p>/</p>
+                            <Button variant="ghost3" size="sm2" asChild><Link href={blogLink}>{blogTitle}</Link></Button>
+                        </nav>
                     )}
                 </div>
-                <Button variant="ghost3" size="icon" asChild><Link href={"/feed.xml"}><MdRssFeed className="h-4 w-4" /></Link></Button>
+                <div className="flex gap-1">
+                    <Button variant="ghost3" size="icon" asChild><Link href={"/feed.xml"}><MdRssFeed className="h-4 w-4" /></Link></Button>
+                </div>
             </div>
         </div>
     )

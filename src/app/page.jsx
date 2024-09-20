@@ -5,6 +5,7 @@ import BlogBox from '@/components/blog-box'
 
 import { readConfig } from "@/libs/readConfig"
 import { readHeaderLinks } from "@/libs/readConfig"
+import HomeHeader from "@/components/about-box/header";
 
 export default function Home() {
   const config = readConfig()
@@ -16,6 +17,7 @@ export default function Home() {
   
   return (
     <div>
+        <HomeHeader header={headerLinks}/>
       <AboutBox 
       pp={pp}
       name={name}

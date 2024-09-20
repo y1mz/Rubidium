@@ -4,19 +4,17 @@ import {Boxes} from "@/components/about-box/boxes"
 
 function AboutBox({ name, description, links, header }) {
     return (
-        <div className="w-full h-screen">
+        <div className="w-full h-screen -mt-16">
             <div className="relative overflow-hidden w-full mx-auto h-full px-5">
                 <div className="absolute inset-0 z-20 container h-full ">
-                    <Boxes />
+                    <Boxes/>
                 </div>
                 <div className="relative top-0 bottom-32 inset-x-0 h-full px-5">
-                    <div className="absolute top-6 inset-x-0 z-30">
-                        <HomeHeader header={header} />
-                    </div>
                     <div className="absolute bottom-4 inset-x-0 px-5">
                         <div className="flex flex-wrap items-center relative z-20">
                             <div className="flex-col">
-                                <p className="font-light tracking-wider text-2xl hover:translate-x-3 transition duration-200">Hi There!</p>
+                                <p className="font-light tracking-wider text-2xl hover:translate-x-3 transition duration-200">Hi
+                                    There!</p>
                                 <h2 className="flex gap-3 items-center font-semibold text-6xl">I'm <p
                                     className="font-bold tracking-tighter text-6xl text-transparent bg-clip-text inline-block bg-gradient-to-r from-indigo-400 to-rose-400
                                     hover:-translate-y-1 transition duration-200"

@@ -51,7 +51,7 @@ function PostPage(props) {
 
     return (
         <>
-            <Header path="Blog" pathLink={"/blog"} />
+            <Header path="Blog" pathLink={"/blog"} blogLink={`/blog/${slug}`} blogTitle={content.data.title}/>
         <div className="flex flex-col place-content-center py-10 px-0 sm:px-10 md:px-20 w-full text-xl sm:text-2xl md:text-3xl">
             <h1 className="font-bold">{content.data.title}</h1>
             <div className="flex flex-wrap justify-between mt-2">
