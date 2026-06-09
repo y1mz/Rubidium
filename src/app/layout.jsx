@@ -1,11 +1,11 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
+import "./globals.css";
+import { Inter } from "next/font/google";
 
-import Footer from '@/components/footer';
+import Footer from "@/components/footer";
 
-import { readConfig } from '@/libs/readConfig';
+import { readConfig, readFooterLinks } from "@/libs/readConfig";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 const config = readConfig();
 
 export const metadata = {
@@ -16,19 +16,18 @@ export const metadata = {
     title: config.siteName,
     description: config.siteDescription,
     url: config.siteURL,
-    modifiedTime: new Date().toISOString()
-  }
-}
+    modifiedTime: new Date().toISOString(),
+  },
+};
 
 export default function RootLayout({ children }) {
+  const links = readFooterLinks();
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-gray-900 text-white`}>
-        <div className="justify-center mx-auto min-h-screen">
-          {children}
-        </div>
-        <Footer />
-        </body>
+        <div className="justify-center mx-auto min-h-screen">{children}</div>
+        <Footer links={links} />
+      </body>
     </html>
-  )
+  );
 }
