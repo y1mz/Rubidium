@@ -1,6 +1,5 @@
 import Link from "next/link";
 import HomepageBlogCard from "@/components/blog-box/homepage-blog-card";
-import { IoIosArrowForward } from "react-icons/io";
 
 import { getPostMetadata } from "@/libs/getPostMetadata";
 
@@ -28,7 +27,6 @@ function BlogBox({ posts }) {
           className="text-2xl hover:bg-gray-800 p-2 text-center rounded-xl font-bold flex items-center"
         >
           <p className="mr-1">Older posts</p>
-          <IoIosArrowForward />
         </Link>
       </div>
     </div>

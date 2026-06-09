@@ -2,15 +2,18 @@
   "header": [
     {
       "title": "Blog",
-      "link": "/blog"
-    },
-    {
-      "title": "RSS",
-      "link": "/feed.xml"
+      "link": "/blog",
+      "icon": "book-text"
     },
     {
       "title": "About",
-      "link": "/about"
+      "link": "/about",
+      "icon": "info"
+    },
+    {
+      "title": "RSS",
+      "link": "/feed.xml",
+      "icon": "rss"
     }
   ],
   "footer": [

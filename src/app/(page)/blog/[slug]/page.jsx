@@ -2,7 +2,7 @@ import Markdown from "markdown-to-jsx";
 import { readConfig } from "@/libs/readConfig";
 import { getPostMetadata, getPostContent } from "@/libs/getPostMetadata";
 import { notFound } from "next/navigation";
-// import Showdown from "showdown";
+import Showdown from "showdown";
 
 import AuthorHoverCard from "@/components/AuthorHoverCard";
 import Header from "@/components/header";
@@ -17,10 +17,9 @@ export function generateMetadata({ params }) {
       .split(/[.!?#]/)
       .slice(0, 2)
       .join("");
-    //const converter = new Showdown.Converter()
-    //const result = converter.makeHtml(sentences)
-    // return result.replace(/<[^>]*>/g, "")
-    return null;
+    const converter = new Showdown.Converter();
+    const result = converter.makeHtml(sentences);
+    return result.replace(/<[^>]*>/g, "");
   };
 
   return {

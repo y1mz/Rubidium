@@ -1,9 +1,7 @@
 function PagesLayout({ children }) {
   return (
-    <section>
-      <div className="max-w-[960px] px-5 justify-center mx-auto">
-        {children}
-      </div>
+    <section className="max-w-[960px] px-5 pb-5 justify-center mx-auto">
+      {children}
     </section>
   );
 }
