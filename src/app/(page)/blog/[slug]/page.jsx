@@ -7,8 +7,8 @@ import Showdown from "showdown";
 import AuthorHoverCard from "@/components/AuthorHoverCard";
 import Header from "@/components/header";
 
-export function generateMetadata({ params }) {
-  const slug = params.slug;
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
   const content = getPostContent(slug);
   const config = readConfig();
 
@@ -35,17 +35,8 @@ export function generateMetadata({ params }) {
   };
 }
 
-export async function generateStaticParams() {
-  const posts = await getPostMetadata();
-
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
-function PostPage(props) {
-  const config = readConfig();
-  const slug = props.params.slug;
+async function PostPage({ params }) {
+  const { slug } = await params;
   const content = getPostContent(slug);
 
   if (!content) {

@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-gray-900 text-white`}>
-        <div className="justify-center mx-auto min-h-screen">{children}</div>
+        <div className="justify-center mx-auto">{children}</div>
         <Footer links={links} />
       </body>
     </html>

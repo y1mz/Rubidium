@@ -20,7 +20,6 @@ function Icon({ name, ...props }) {
 }
 
 function HeaderButton({ icon, title, link }) {
-  console.log(link);
   return (
     <Button variant="ghost3" size="icon" className="relative group" asChild>
       <Link href={link}>
@@ -44,7 +43,6 @@ function HeaderButton({ icon, title, link }) {
 function Header({ path, pathLink, blogLink, blogTitle }) {
   const config = readConfig();
   const headerButtons = readHeaderLinks();
-  console.log(headerButtons);
 
   return (
     <div className="sticky top-2 rounded-md backdrop-blur-md bg-white/5 p-2 items-center z-30">
