@@ -8,7 +8,7 @@ function AboutLinks({ title, link }) {
         href={link}
         className="flex items-center gap-1 text-sm p-2"
       >
-        <LinkIcon className="h-5 w-5" /> {title}{" "}
+        <LinkIcon className="h-3 w-3" /> {title}{" "}
       </Link>
     </div>
   );

@@ -46,7 +46,7 @@ function Header({ path, pathLink, blogLink, blogTitle }) {
 
   return (
     <div className="sticky top-2 rounded-md backdrop-blur-md bg-white/5 p-2 items-center z-30">
-      <div className="flex justify-between text-lg">
+      <div className="flex justify-between text-lg items-center">
         <div className="flex items-center">
           <Button variant="ghost3" size="sm2" asChild>
             <Link className="text-bold" href={"/"}>
@@ -62,7 +62,7 @@ function Header({ path, pathLink, blogLink, blogTitle }) {
             </>
           )}
           {blogLink && (
-            <nav className="hidden md:flex">
+            <nav className="hidden md:flex items-center">
               <p>/</p>
               <Button variant="ghost3" size="sm2" asChild>
                 <Link href={blogLink}>{blogTitle}</Link>

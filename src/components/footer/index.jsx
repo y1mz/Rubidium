@@ -9,13 +9,13 @@ function Footer({ links }) {
             {link.title}
           </Link>
         ))}
-        <> ©{new Date().getFullYear()}</>
       </div>
       <div className="text-xs text-gray-400">
         Made by{" "}
         <Link className="underline" href="https://github.com/y1mz">
           Batuhan Y. Yilmaz
         </Link>
+        <> ©{new Date().getFullYear()}</>
       </div>
     </footer>
   );
