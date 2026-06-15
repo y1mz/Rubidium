@@ -1,36 +1,30 @@
 import Markdown from "markdown-to-jsx";
 import { readConfig } from "@/libs/readConfig";
-import { getPostMetadata, getPostContent } from "@/libs/getPostMetadata";
+import { getPostContent } from "@/libs/getPostMetadata";
 import { notFound } from "next/navigation";
-import Showdown from "showdown";
+import { getFirstTwoSentences } from "@/libs/getDescription";
 
-import AuthorHoverCard from "@/components/AuthorHoverCard";
 import Header from "@/components/header";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const content = getPostContent(slug);
   const config = readConfig();
-
-  const description = () => {
-    const sentences = content.content
-      .split(/[.!?#]/)
-      .slice(0, 2)
-      .join("");
-    const converter = new Showdown.Converter();
-    const result = converter.makeHtml(sentences);
-    return result.replace(/<[^>]*>/g, "");
-  };
+  const description = getFirstTwoSentences(content.content);
 
   return {
     title: `${content.data.title} - ${config.siteName}`,
-    description: description(),
-    authors: [{ name: config.authorName, url: `https://${config.siteURL}` }],
+    description: description,
+    authors: [
+      { name: config.authorFullName, url: `https://${config.siteURL}` },
+    ],
     openGraph: {
       title: content.data.title,
-      description: description(),
+      description: description,
       type: "website",
       publishedTime: content.data.date,
+      images: content.data.image && content.data.image,
     },
   };
 }
@@ -38,6 +32,7 @@ export async function generateMetadata({ params }) {
 async function PostPage({ params }) {
   const { slug } = await params;
   const content = getPostContent(slug);
+  const config = readConfig();
 
   if (!content) {
     return notFound();
@@ -51,22 +46,28 @@ async function PostPage({ params }) {
         blogLink={`/blog/${slug}`}
         blogTitle={content.data.title}
       />
-      <div className="flex flex-col place-content-center py-10 px-0 sm:px-10 md:px-20 w-full text-xl sm:text-2xl md:text-3xl">
+      <div className="space-y-5 p-5 sm:px-10 md:px-20 md:py-5 w-full text-xl sm:text-2xl md:text-3xl">
         <h1 className="font-bold">{content.data.title}</h1>
-        <div className="flex flex-wrap justify-between mt-2">
-          <AuthorHoverCard />
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-1">
+            <Avatar className="h-5 w-5">
+              <AvatarFallback className="text-xs">
+                {config.authorFullName.substring(0, 1)}
+              </AvatarFallback>
+              <AvatarImage src={config.authorImage} />
+            </Avatar>
+            <p className="text-sm font-bold">{config.authorFullName}</p>
+          </div>
           <p className="text-sm">{`${new Date(content.data.date).toDateString()}`}</p>
         </div>
       </div>
       <hr className="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700 justify-center"></hr>
-      <div className="text-lg max-w-prose mx-auto">
-        <article
-          className="prose prose-invert lg:prose-xl
+      <article
+        className="text-lg max-w-prose mx-auto py-5 prose prose-invert lg:prose-xl
             prose-code:text-sm prose-code:mx-5 prose-code:my-5 prose-code:bg-slate-800 prose-pre:bg-slate-800"
-        >
-          <Markdown>{content.content}</Markdown>
-        </article>
-      </div>
+      >
+        <Markdown>{content.content}</Markdown>
+      </article>
     </>
   );
 }

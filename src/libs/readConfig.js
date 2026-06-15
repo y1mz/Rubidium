@@ -1,22 +1,23 @@
-import config from "&/config/siteconfig.json"
-import links from "&/config/header.json"
+import fs from "fs";
+import path from "path";
 
 export function readConfig() {
-    return {
-        siteName: config.siteName,
-        siteURL: config.siteUrl,
-        siteDescription: config.siteDescription,
-        authorName: config.authorName,
-        authorBio: config.authorBio,
-        authorEmail: config.authorEmail,
-        links: config.links
-    }
+  const fileLocation = path.join(path.resolve("config/"), "siteconfig.json");
+  const rawFile = fs.readFileSync(fileLocation, "utf-8");
+  const config = JSON.parse(rawFile);
+  return config;
 }
 
 export function readFooterLinks() {
-    return links.footer
+  const fileLocation = path.join(path.resolve("config/"), "header.json");
+  const rawFile = fs.readFileSync(fileLocation, "utf-8");
+  const links = JSON.parse(rawFile);
+  return links.footer;
 }
 
 export function readHeaderLinks() {
-    return links.header
+  const fileLocation = path.join(path.resolve("config/"), "header.json");
+  const rawFile = fs.readFileSync(fileLocation, "utf-8");
+  const links = JSON.parse(rawFile);
+  return links.header;
 }
