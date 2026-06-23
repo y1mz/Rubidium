@@ -1,19 +1,20 @@
 import React from "react";
 
+import Header from "@/components/header";
 import AboutBox from "@/components/about-box";
 import BlogBox from "@/components/blog-box";
 
 import { readConfig } from "@/libs/readConfig";
 import { readHeaderLinks } from "@/libs/readConfig";
-import Header from "@/components/header";
+import { getPostMetadata } from "@/libs/getPostMetadata";
+
+// Make this page dynamic
+export const dynamic = "force-dynamic";
 
 export default function Home() {
   const config = readConfig();
   const headerLinks = readHeaderLinks();
-
-  const bio = config.authorBio;
-  const name = config.authorName;
-  const pp = "/assets/img/avatar.png";
+  const latestPosts = getPostMetadata().slice(-6).reverse();
 
   return (
     <div>
@@ -21,14 +22,13 @@ export default function Home() {
         <Header />
       </header>
       <AboutBox
-        pp={pp}
-        name={name}
-        description={bio}
+        name={config.authorName}
+        description={config.authorBio}
         links={config.links}
         header={headerLinks}
       />
       <div className="max-w-[960px] px-5 py-5 mx-auto">
-        <BlogBox />
+        <BlogBox latestPosts={latestPosts} />
       </div>
     </div>
   );

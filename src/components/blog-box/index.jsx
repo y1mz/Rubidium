@@ -2,11 +2,7 @@ import Link from "next/link";
 import HomepageBlogCard from "@/components/blog-box/homepage-blog-card";
 import { ChevronRight } from "lucide-react";
 
-import { getPostMetadata } from "@/libs/getPostMetadata";
-
-function BlogBox() {
-  const latestPosts = getPostMetadata().slice(-6).reverse();
-
+function BlogBox({ latestPosts }) {
   return (
     <div id="blogbox" className="mx-auto flex flex-col gap-4 py-10">
       <div>
