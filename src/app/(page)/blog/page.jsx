@@ -15,7 +15,7 @@ async function BlogPage({ searchParams }) {
 
   return (
     <div>
-      <Header path="Blog" pathLink={"/blog"} />
+      <Header path="Blog" pathLink={"/blog?p=1"} />
       <div className="flex place-content-center px-10 py-20 w-full text-3xl">
         <h1>Blog</h1>
       </div>

@@ -42,7 +42,7 @@ async function PostPage({ params }) {
     <>
       <Header
         path="Blog"
-        pathLink={"/blog"}
+        pathLink={"/blog?p=1"}
         blogLink={`/blog/${slug}`}
         blogTitle={content.data.title}
       />

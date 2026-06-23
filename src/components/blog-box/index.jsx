@@ -20,7 +20,7 @@ function BlogBox({ latestPosts }) {
       </div>
       <div>
         <Link
-          href="/blog"
+          href="/blog?p=1"
           className="text-2xl hover:bg-gray-800 p-2 text-center rounded-xl font-bold flex items-center"
         >
           <p className="mr-1">Older posts</p>
