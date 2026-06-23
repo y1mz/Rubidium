@@ -1,20 +1,25 @@
 {
-    "siteName": "Rubidium",
-    "siteUrl": "example.com",
-    "siteDescription": "A markdown based blog site created for beginngers by a beginner!",
-    "authorName": "Batuhan",
-    "authorFullName" : "Rubidium",
-    "authorBio": "A Markdown based blog site created by a beginner for beginners. It's build with the idea of keeping it simple and the source code is very simple to read and understand. Read more over at Github from the link down below.",
-    "authorEmail": "mail.example.com",
-    "authorImage" : "/assets/img/avatar.png",
-    "links" : [
-        {
-            "title": "Mastodon",
-            "link": "https://fosstodon.org/@B4tuhanY1lmaz"
-        },
-        {
-            "title": "Github",
-            "link": "https://github.com/B4tuhanY1lmaz/Rubidium"
-        }
-    ]
+  "siteName": "Rubidium",
+  "siteUrl": "example.com",
+  "siteDescription": "A markdown based blog site created for beginngers by a beginner!",
+  "authorName": "Batuhan",
+  "authorFullName": "Rubidium",
+  "authorBio": "A Markdown based blog site created by a beginner for beginners. It's build with the idea of keeping it simple and the source code is very simple to read and understand. Read more over at Github from the link down below.",
+  "authorEmail": "mail.example.com",
+  "authorImage": "/assets/img/avatar.png",
+  "siteImage": "",
+  "links": [
+    {
+      "title": "Mastodon",
+      "link": "https://fosstodon.org/@B4tuhanY1lmaz"
+    },
+    {
+      "title": "Github",
+      "link": "https://github.com/B4tuhanY1lmaz/Rubidium"
+    }
+  ],
+  "vertificationTags": {
+    "tag1": "content1",
+    "tag2": "content2"
+  }
 }

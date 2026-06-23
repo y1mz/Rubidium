@@ -1,14 +1,14 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { readConfig, readFooterLinks } from "@/libs/readConfig";
 
 import Footer from "@/components/footer";
-
-import { readConfig, readFooterLinks } from "@/libs/readConfig";
 
 const inter = Inter({ subsets: ["latin"] });
 const config = readConfig();
 
-export const metadata = {
+export async function generateMetadata() {
+  return {
   title: config.siteName,
   description: config.siteDescription,
   metadataBase: new URL("https://" + config.siteURL),
@@ -17,8 +17,10 @@ export const metadata = {
     description: config.siteDescription,
     url: config.siteURL,
     modifiedTime: new Date().toISOString(),
-  },
-};
+    images: config.siteImage && config.siteImage
+    },
+  other: config.vertificationTags
+}
 
 export default function RootLayout({ children }) {
   const links = readFooterLinks();

@@ -5,6 +5,7 @@ function AboutLinks({ title, link }) {
     <div className="rounded-lg bg-white/10 backdrop-blur-md hover:bg-white/20">
       <Link
         target="_blank"
+        rel="me"
         href={link}
         className="flex items-center gap-1 text-sm p-2"
       >
