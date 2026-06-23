@@ -50,7 +50,7 @@ function BlogPageContainer({ p, posts }) {
         ))}
       </div>
       <div className="w-full mt-5 bottom-0 flex justify-between items-center gap-1 mx-auto">
-        {pagesCount > 1 && (
+        {pagesCount > 1 ? (
           <Link
             href={url + "?p=" + (pp - 1)}
             className={cn(pp == 1 && "pointer-events-none")}
@@ -60,11 +60,13 @@ function BlogPageContainer({ p, posts }) {
               <ChevronLeft /> Previous
             </Button>
           </Link>
+        ) : (
+          <div></div>
         )}
         <p className="text-sm">
           {pp} / {pagesCount}
         </p>
-        {pagesCount > 1 && (
+        {pagesCount > 1 ? (
           <Link
             href={url + "?p=" + (pp + 1)}
             className={cn(pp == pagesCount && "pointer-events-none")}
@@ -74,6 +76,8 @@ function BlogPageContainer({ p, posts }) {
               Next <ChevronRight />
             </Button>
           </Link>
+        ) : (
+          <div></div>
         )}
       </div>
     </>
