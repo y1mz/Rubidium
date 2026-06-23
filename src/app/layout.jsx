@@ -9,20 +9,21 @@ const config = readConfig();
 
 export async function generateMetadata() {
   return {
-  title: config.siteName,
-  description: config.siteDescription,
-  metadataBase: new URL("https://" + config.siteURL),
-  openGraph: {
     title: config.siteName,
     description: config.siteDescription,
-    url: config.siteURL,
-    modifiedTime: new Date().toISOString(),
-    images: config.siteImage && config.siteImage
+    metadataBase: new URL("https://" + config.siteURL),
+    openGraph: {
+      title: config.siteName,
+      description: config.siteDescription,
+      url: config.siteURL,
+      modifiedTime: new Date().toISOString(),
+      images: config.siteImage && config.siteImage,
     },
-  other: config.vertificationTags
+    other: config.vertificationTags,
+  };
 }
 
-export default function RootLayout({ children }) {
+function RootLayout({ children }) {
   const links = readFooterLinks();
   return (
     <html lang="en" suppressHydrationWarning>
@@ -33,3 +34,5 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
+export default RootLayout;
